@@ -1,0 +1,133 @@
+This document describes the initial setup of a computer for use in the FOSS-STEM-lab. It will delete any information already on the computer's hard drive.
+
+Any backups of the information on the target computer(s) should already have been done.
+
+You will need a computer(s) to install linux onto, and two USB sticks with at least 2GB of storage each.
+
+Some familiarity with linux systems is desirable.
+
+Temporary network access is desirable, to allow software updates and additional packages to be downloaded. Ongoing network access will not be required except for periodically obtaining software updates. For desktop computers, this can be provided with either an ethernet cable, or tethering to a mobile phone over USB.
+
+
+Step 1)
+
+Obtain a disc image of the lubuntu installer. At the time of writing, this is 20.04LTS, where LTS refers to long term support.
+
+the installer can be obtained from:
+
+https://lubuntu.me/downloads/
+
+You should select the 64 bit insaller for most hardware that is newer than a pentium.
+
+Step 2)
+
+Make one of the USB sticks a bootable USB stick with the installer disc image.
+
+The image needs to be written to the USB stick. This will overwrite any data already on the USB stick.
+
+The easiest way to write the image to a USB stick is to use the "Startup Disk Creator" on an existing installation of lubuntu in the System Tool menu. Failing this, there are various utilities available for Windows and OS X which can do this.
+
+Step 3)
+
+Once the bootable media has been created, the computer to be converted to FOSS-STEM-lab use can be turned on, with the USB stick inserted in a spare USB port.
+
+The computer should boot off the USB stick. If the computer boots off the existing operating systenm on the hard drive, you may need to restart the commputer, and enter the BIOS configuration screen and alter the boot order such that the computer boots from the USB device before trying to boot from the internal hard drive.
+
+Step 4a)
+
+For installation on the first computer in the lab, temporary network access is desirable, using either an ethernet cable, or tethering via USB to a mobile phone sharing mobile internet. This will allow current packages to be downloaded to bring the installation up to date. 
+
+Step 4b)
+
+Follow the graphical installation instructions on the USB stick. When installing, the "Use entire disk" option will be the simplest option, bearing in mind that all data on the computer will be overwritten. Again: any backups of the information on the computer should already have been done.
+It is worth creating a default "admin" account on the computer with a suitable password.
+Student accounts can also be added, such as "stem2021", with suitable passwords.
+
+Step 5)
+
+Once installation is complete, reboot the computer.
+
+Step 6)
+
+On rebooting, bring up a terminal window (CTRL-ALT-T) and install the additional packages needed for FOSS-STEM-lab use.
+
+This can be done with a copy of the script in this repository 
+
+sudo install-packages.sh
+
+This will install a large number of useful packages, including scratux, a standalone Scratch v3 coding environment.
+
+after which network access can be removed.
+
+Step 7)
+
+If further computer installations are planned, the data to be downloaded can be minimised by copying the already downloaded software packages to the second USB stick, allowing them to be copied to subsequent machines.
+
+Copy the *.deb files from 
+
+/var/cache/apt/archives/
+
+to the spare USB stick
+
+Step 8)
+
+Repeat steps 4b), 5)
+
+after rebooting, bring up a terminal window (CTRL-ALT-T) and install the additional software packages *.deb from the external USB stick to
+
+/var/cache/apt/archives/
+
+on the newly installed computer with the following command
+
+sudo cp -n PATH_TO_YOUR_USB_STICK/*.deb /var/apt/cache/archives
+
+then provide temporary network access to the computer, using either an ethernet cable, or tethering via USB to a mobile phone sharing mobile internet.
+
+this will make the listings of current software  available, enabling the local copies to be used without the need for repeated downloading.
+
+Bring up a terminal window (CTRL-ALT-T) and install the additional packages needed for FOSS-STEM-lab use
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo install-packages.sh
+
+after which network access can be removed
+
+then repeat steps 4b), 5), 7) and 8) for all subsequent computers in the STEM lab
+
+
+9) Subsequent sotfware updates
+
+Select the computer to be updated first
+
+provide temporary network access using either an ethernet cable, or tethering via USB to a mobile phone sharing mobile internet
+
+Bring up a terminal window (CTRL-ALT-T) and install the additional packages needed for FOSS-STEM-lab use
+
+sudo apt-get update
+sudo apt-get upgrade
+
+after which network connectivity can be removed
+
+if updating other computers, copy the newly downloaded packages (*.deb files) from 
+
+/var/cache/apt/archives/
+
+to the spare USB stick
+
+On the next computer to be upgraded. bring up a terminal window (CTRL-ALT-T) and install the additional software packages *.deb from the external USB stick to
+
+/var/cache/apt/archives/
+
+on the newly installed computer with the following command
+
+sudo cp -n PATH_TO_YOUR_USB_STICK/*.deb /var/apt/cache/archives
+
+then provide temporary network access to the computer, using either an ethernet cable, or tethering via USB to a mobile phone sharing mobile internet.
+
+Bring up a terminal window (CTRL-ALT-T) and install the package updates
+
+sudo apt-get update
+sudo apt-get upgrade
+
+after which network access can be removed
