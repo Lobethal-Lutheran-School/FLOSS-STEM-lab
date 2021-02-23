@@ -17,3 +17,13 @@ To this end, the lubuntu linux distribution has been selected, owing to
 2) is ability to leverage the debian/ubuntu software ecosystem
 
 3) the excellent support available for debian/ubuntu derivative operating systems
+
+Key motivations are
+
+1) allow students to code, create and explore with free, give away hardware and FOSS software
+
+2) allow a computer lab to work without cloud hosted content or software as a service
+
+3) allow all of the above without the cost of always on internet
+
+4) allow all of the above without concerns about filtering of internet content
