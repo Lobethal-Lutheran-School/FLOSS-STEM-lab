@@ -51,8 +51,9 @@ Step 6)
 
 On rebooting, bring up a terminal window (CTRL-ALT-T) and install the additional packages needed for FOSS-STEM-lab use.
 
-This can be done with a copy of the script in this repository 
+This can be done with a copy of the script in this repository
 
+sudo chmod +x install-packages.sh
 sudo install-packages.sh
 
 This will install a large number of useful packages, including scratux, a standalone Scratch v3 coding environment.
@@ -146,3 +147,7 @@ Pro Tips
 
 Multiple installer USB sticks can speed initial FOSS-STEM-lab setup
 Multiple software archive USB sticks can speed subsequent installations and updates
+
+TODO
+
+arduino IDE installation description
