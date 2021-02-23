@@ -17,7 +17,7 @@ the installer can be obtained from:
 
 https://lubuntu.me/downloads/
 
-You should select the 64 bit insaller for most hardware that is newer than a pentium.
+You should select the 64 bit insaller for most hardware that is newer than a pentium. Older hardware may require the 32-bit installer.
 
 Step 2)
 
@@ -95,8 +95,12 @@ after which network access can be removed
 
 then repeat steps 4b), 5), 7) and 8) for all subsequent computers in the STEM lab
 
+9) Fine tuning the installation
 
-9) Subsequent sotfware updates
+automatic software updates can be turned off in the "Software Sources" system menu if the machines are not routinely network connected. 
+additional users can be added with the "Preference->LXQt Setting->Users and Groups" menu
+
+10) Subsequent software updates
 
 Select the computer to be updated first
 
@@ -109,17 +113,21 @@ sudo apt-get upgrade
 
 after which network connectivity can be removed
 
+11a)
+
 if updating other computers, copy the newly downloaded packages (*.deb files) from 
 
 /var/cache/apt/archives/
 
-to the spare USB stick
+to the spare USB stick containing the software package updates (*.deb files)
 
-On the next computer to be upgraded. bring up a terminal window (CTRL-ALT-T) and install the additional software packages *.deb from the external USB stick to
+11b)
+
+On the next computer to be upgraded. bring up a terminal window (CTRL-ALT-T) and install the additional software packages *.deb from the plugged in external USB stick containing the software packages to
 
 /var/cache/apt/archives/
 
-on the newly installed computer with the following command
+on the computer with the following command
 
 sudo cp -n PATH_TO_YOUR_USB_STICK/*.deb /var/apt/cache/archives
 
@@ -131,3 +139,10 @@ sudo apt-get update
 sudo apt-get upgrade
 
 after which network access can be removed
+
+Repeat 11b) for all subsequent computers to be updated
+
+Pro Tips
+
+Multiple installer USB sticks can speed initial FOSS-STEM-lab setup
+Multiple software archive USB sticks can speed subsequent installations and updates
