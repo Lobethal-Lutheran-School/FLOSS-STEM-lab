@@ -20,7 +20,7 @@ To this end, the lubuntu linux distribution has been selected, owing to
 
 Key motivations are
 
-1) allow students to code, create and explore with free, give away hardware and FOSS software
+1) allow students to code, create and explore with free, give away hardware and FLOSS software
 
 2) allow a computer lab to work without cloud hosted content or software as a service
 
