@@ -1,4 +1,4 @@
-This repository aims to simplify the set up of a basic STEM lab using free and open source software (FOSS) on simple hardware, with some scripts and advice aimed at simplifying the setup for educators or volunteers.
+This repository aims to simplify the set up of a basic STEM lab using free, libre and open source software (FLOSS) on simple hardware, with some scripts and advice aimed at simplifying the setup for educators or volunteers.
 
 The aim of this project is to allow schools to create computer labs that
 
