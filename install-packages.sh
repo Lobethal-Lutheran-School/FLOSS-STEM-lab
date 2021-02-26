@@ -7,8 +7,8 @@
 sudo ./setup-scratux.sh
 sudo apt-get update
 sudo apt-get upgrade
-sudo ./install-education-software
-sudo ./install-development-software
+sudo ./install-education-software.sh
+sudo ./install-development-software.sh
 sudo apt-get dist-upgrade
 sudo apt list --upgradable
 
