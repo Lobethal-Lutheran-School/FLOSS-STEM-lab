@@ -53,8 +53,12 @@ On rebooting, bring up a terminal window (CTRL-ALT-T) and install the additional
 
 This can be done with a copy of the script in this repository
 
-sudo chmod +x install-packages.sh
-sudo install-packages.sh
+mkdir Source
+cd Source
+git clone https://github.com/Lobethal-Lutheran-School/FLOSS-STEM-lab.git
+cd FLOSS-STEM-lab
+sudo chmod +x *.sh
+sudo ./install-packages.sh
 
 This will install a large number of useful packages, including scratux, a standalone Scratch v3 coding environment.
 
@@ -88,9 +92,12 @@ this will make the listings of current software  available, enabling the local c
 
 Bring up a terminal window (CTRL-ALT-T) and install the additional packages needed for FLOSS-STEM-lab use
 
-sudo apt-get update
-sudo apt-get upgrade
-sudo install-packages.sh
+mkdir Source
+cd Source
+git clone https://github.com/Lobethal-Lutheran-School/FLOSS-STEM-lab.git
+cd FLOSS-STEM-lab
+sudo chmod +x *.sh
+sudo ./install-packages.sh
 
 after which network access can be removed
 
