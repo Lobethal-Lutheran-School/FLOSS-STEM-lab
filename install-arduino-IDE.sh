@@ -1,0 +1,14 @@
+#!/bin/sh
+# shell script to install arduino environment
+
+cp -n PATH_TO_YOUR_USB_STICK/arduino-1.8.13-linux64.tar.xz ~/Source/
+cd Source
+tar xvf arduino-1.8.13-linux64.tar.xz
+cd arduino-1.8.13
+sudo ./install.sh
+
+# here we add the ability to use the serial port for arduino purposes
+# uncomment and adjust to suit usernames
+
+sudo usermod -a -G dialout admin
+sudo usermod -a -G dialout stem2021
