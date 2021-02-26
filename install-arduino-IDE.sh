@@ -4,6 +4,7 @@
 # modify and/or uncomment to automate placement of IDE distribution tarball
 # cp -n PATH_TO_YOUR_USB_STICK/arduino-1.8.13-linux64.tar.xz ~/Source/
 
+mkdir -p ~/Source
 cd ~/Source
 tar xvf arduino-1.8.13-linux64.tar.xz
 cd arduino-1.8.13
