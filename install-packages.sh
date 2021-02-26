@@ -1,17 +1,16 @@
 #!/bin/sh
-#v1.1
+#v1.2
 
 #Uncomment this and update path to USB stick if doing additional machines 
 #sudo cp -n /media/admin/USBSTICK/LatestDebs/* /var/cache/apt/archives/
 
-#here we add the scratux repository key
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
-#the following needs to be added to /etc/apt/sources.list for the scratux repository
-#sudo echo "deb https://dl.bintray.com/scratux/stable focal main" >> /etc/apt/sources.list
-
+sudo ./setup-scratux.sh
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install astro-education ezgo-education games-education junior-education gimp inkscape pingus pcb-rnd git subversion build-essential cmake scratux xaos povray dreamchess iagno leocad ldraw-parts povray-doc povray-examples texmaker gnome-mahjongg lepton-eda tuxpaint audacity musescore3 smplayer lepton-schematic
+sudo ./install-education-software
+sudo ./install-development-software
+sudo apt-get dist-upgrade
+sudo apt list --upgradable
 
 #TODO describe arduino IDE installation
 #
