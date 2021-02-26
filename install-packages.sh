@@ -10,17 +10,8 @@ sudo apt-get upgrade
 sudo ./install-education-software.sh
 sudo ./install-development-software.sh
 sudo ./install-rtl-sdr.sh
+# this assumes arduino-1.8.13 has been put in ~/Source/ rather than downloading it
+sudo ./install-arduino-IDE.sh
+
 sudo apt-get dist-upgrade
 sudo apt list --upgradable
-
-#TODO describe arduino IDE installation
-#
-# arduino download tarball
-# tar xvf FILENAME
-# sudo ./install.sh
-
-# here we add the ability to use the serial port for arduino purposes
-# uncomment and adjust to suit usernames
-#
-# sudo usermod -a -G dialout admin
-# sudo usermod -a -G dialout stem2021
